@@ -20,14 +20,13 @@ class CategoryRepository : CRUDrepository<CategoryModel> {
         try {
             statement = connection!!.createStatement()
             resultSet = statement.executeQuery(query)
-            var model: CategoryModel?
+            var entity: CategoryModel?
             while (resultSet.next()) {
-                model = CategoryModel(
+                entity = CategoryModel(
                     resultSet.getInt("id"),
                     resultSet.getString("name"),
                 )
-                println(model)
-                list.add(model)
+                list.add(entity)
             }
         } catch (ex: SQLException) {
             ex.printStackTrace()
@@ -55,9 +54,8 @@ class CategoryRepository : CRUDrepository<CategoryModel> {
     }
 
     override fun delete(id: Int): Boolean {
-        val query = "delete from book where id = $id"
+        val query = "delete from category where id = $id"
         dbHelper.executeQuery(query)
-        //TODO return true if deletion is completed
         //TODO return true if deletion is completed
         return true
     }
