@@ -1,14 +1,27 @@
 package pl.gawor.vapecatalogue.controller
 
 import javafx.fxml.FXML
+import javafx.fxml.FXMLLoader
+import javafx.fxml.Initializable
+import javafx.geometry.Insets
 import javafx.scene.control.Button
 import javafx.scene.control.Label
 import javafx.scene.control.TextArea
 import javafx.scene.control.TextField
 import javafx.scene.image.ImageView
+import javafx.scene.layout.AnchorPane
 import javafx.scene.layout.GridPane
+import javafx.scene.layout.Region
+import pl.gawor.vapecatalogue.VapeCatalogueApplication
+import pl.gawor.vapecatalogue.model.CategoryModel
+import pl.gawor.vapecatalogue.model.ItemModel
+import pl.gawor.vapecatalogue.repository.ItemRepository
+import pl.gawor.vapecatalogue.service.ItemService
+import java.net.URL
+import java.util.*
+import kotlin.collections.ArrayList
 
-class Controller {
+class Controller : Initializable {
     @FXML
     private lateinit var button_add: Button
 
@@ -86,4 +99,45 @@ class Controller {
 
     @FXML
     private lateinit var textField_search: TextField
+
+    private var itemService: ItemService
+
+    var list = ArrayList<ItemModel>()
+
+    init {
+        val itemRepository = ItemRepository()
+        itemService = ItemService(itemRepository)
+    }
+
+    override fun initialize(p0: URL?, p1: ResourceBundle?) {
+       refreshList(CategoryModel(1,"Grzałki"))
+    }
+
+    private fun refreshList(category: CategoryModel) {
+        list = itemService.list() as ArrayList<ItemModel>
+
+        var column = 0
+        var row = 1
+
+        for (model in list) {
+            val fxmlLoader = FXMLLoader(VapeCatalogueApplication::class.java.getResource("view/item.fxml"))
+            val anchorPane: AnchorPane = fxmlLoader.load()
+
+            val itemController = fxmlLoader.getController<ItemController>()
+            itemController.set(model)
+            if (column == 4) {
+                column = 0
+                row ++
+            }
+            gridPane.add(anchorPane, column++, row)
+            gridPane.minWidth = Region.USE_COMPUTED_SIZE
+            gridPane.minHeight = Region.USE_COMPUTED_SIZE
+            gridPane.maxWidth = Region.USE_COMPUTED_SIZE
+            gridPane.maxHeight = Region.USE_COMPUTED_SIZE
+            gridPane.prefWidth = Region.USE_COMPUTED_SIZE
+            gridPane.prefHeight = Region.USE_COMPUTED_SIZE
+            GridPane.setMargin(anchorPane, Insets(9.0))
+        }
+    }
+
 }
