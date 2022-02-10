@@ -110,11 +110,11 @@ class Controller : Initializable {
     }
 
     override fun initialize(p0: URL?, p1: ResourceBundle?) {
-       refreshList(CategoryModel(1,"Grzałki"))
+       refreshList(CategoryModel(3,"Grzałki"))
     }
 
     private fun refreshList(category: CategoryModel) {
-        list = itemService.list() as ArrayList<ItemModel>
+        list = itemService.list(category) as ArrayList<ItemModel>
 
         var column = 0
         var row = 1
