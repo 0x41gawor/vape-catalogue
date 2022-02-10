@@ -10,15 +10,15 @@
 
 <AnchorPane prefHeight="215.0" prefWidth="225.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.gawor.vapecatalogue.controller.ItemController">
     <VBox alignment="CENTER" prefHeight="215.0" prefWidth="225.0">
-        <Label text="ProGrzalka1">
+        <Label fx:id="label_name" text="ProGrzalka1">
          <font>
             <Font size="24.0" />
          </font></Label>
-        <ImageView fitHeight="134.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@img/1.png"/>
+        <ImageView fx:id="imageView" fitHeight="134.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@img/1.png" />
         </ImageView>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-            <Label prefHeight="35.0" prefWidth="64.0" text="10.00">
+            <Label fx:id="label_price" prefHeight="35.0" prefWidth="64.0" text="10.00">
             <font>
                <Font size="24.0" />
             </font></Label>
