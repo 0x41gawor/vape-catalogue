@@ -18,8 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1013.0"
-            prefWidth="1920.0" xmlns="http://javafx.com/javafx/17">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1013.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <left>
          <VBox prefHeight="1013.0" prefWidth="480.0" styleClass="vbox_rightBar" stylesheets="@css/styles.css" BorderPane.alignment="CENTER">
@@ -35,7 +34,7 @@
                </VBox.margin>
             </Label>
             <Pane prefHeight="62.0" prefWidth="450.0" />
-            <Label prefHeight="67.0" prefWidth="422.0" text="Grzałki" textFill="#e1e8e3">
+            <Label fx:id="label_coils" prefHeight="67.0" prefWidth="422.0" text="Grzałki" textFill="#e1e8e3">
                <VBox.margin>
                   <Insets right="200.0" />
                </VBox.margin>
@@ -43,7 +42,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label prefHeight="54.0" prefWidth="480.0" text="Pody" textFill="#e1e8e3">
+            <Label fx:id="label_pods" prefHeight="54.0" prefWidth="480.0" text="Pody" textFill="#e1e8e3">
                <VBox.margin>
                   <Insets right="200.0" />
                </VBox.margin>
@@ -51,7 +50,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label prefHeight="54.0" prefWidth="480.0" text="Mody" textFill="#e1e8e3">
+            <Label fx:id="label_mods" prefHeight="54.0" prefWidth="480.0" text="Mody" textFill="#e1e8e3">
                <VBox.margin>
                   <Insets right="200.0" />
                </VBox.margin>
@@ -59,7 +58,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label prefHeight="54.0" prefWidth="480.0" text="Sticki" textFill="#e1e8e3">
+            <Label fx:id="label_sticks" prefHeight="54.0" prefWidth="480.0" text="Sticki" textFill="#e1e8e3">
                <VBox.margin>
                   <Insets right="200.0" />
                </VBox.margin>
@@ -67,7 +66,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label prefHeight="54.0" prefWidth="480.0" text="Parowniki" textFill="#e1e8e3">
+            <Label fx:id="label_evaporator" prefHeight="54.0" prefWidth="480.0" text="Parowniki" textFill="#e1e8e3">
                <VBox.margin>
                   <Insets right="200.0" />
                </VBox.margin>
@@ -75,7 +74,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label prefHeight="54.0" prefWidth="480.0" text="Susz&amp;othersCBD" textFill="#e1e8e3">
+            <Label fx:id="label_dryCBDs" prefHeight="54.0" prefWidth="480.0" text="Susz&amp;othersCBD" textFill="#e1e8e3">
                <VBox.margin>
                   <Insets right="200.0" />
                </VBox.margin>
@@ -83,7 +82,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label prefHeight="54.0" prefWidth="480.0" text="Vaporyzatory " textFill="#e1e8e3">
+            <Label fx:id="label_vaporizers" prefHeight="54.0" prefWidth="480.0" text="Vaporyzatory " textFill="#e1e8e3">
                <VBox.margin>
                   <Insets right="200.0" />
                </VBox.margin>
@@ -91,7 +90,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label prefHeight="54.0" prefWidth="480.0" text="Premixy " textFill="#e1e8e3">
+            <Label fx:id="label_premixes" prefHeight="54.0" prefWidth="480.0" text="Premixy " textFill="#e1e8e3">
                <VBox.margin>
                   <Insets right="200.0" />
                </VBox.margin>
@@ -99,7 +98,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label prefHeight="54.0" prefWidth="480.0" text="Liquidy" textFill="#e1e8e3">
+            <Label fx:id="label_liquids" prefHeight="54.0" prefWidth="480.0" text="Liquidy" textFill="#e1e8e3">
                <VBox.margin>
                   <Insets right="200.0" />
                </VBox.margin>
@@ -107,7 +106,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label prefHeight="54.0" prefWidth="480.0" text="Preparaty " textFill="#e1e8e3">
+            <Label fx:id="label_specimens" prefHeight="54.0" prefWidth="480.0" text="Preparaty " textFill="#e1e8e3">
                <VBox.margin>
                   <Insets right="200.0" />
                </VBox.margin>
@@ -115,7 +114,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label prefHeight="54.0" prefWidth="480.0" text="Aromatyzujące " textFill="#e1e8e3">
+            <Label fx:id="label_aromatics" prefHeight="54.0" prefWidth="480.0" text="Aromatyzujące " textFill="#e1e8e3">
                <VBox.margin>
                   <Insets right="200.0" />
                </VBox.margin>
@@ -123,7 +122,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label prefHeight="54.0" prefWidth="480.0" text="Inne" textFill="#e1e8e3">
+            <Label fx:id="label_others" prefHeight="54.0" prefWidth="480.0" text="Inne" textFill="#e1e8e3">
                <VBox.margin>
                   <Insets right="200.0" />
                </VBox.margin>
@@ -140,16 +139,16 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="90.0" prefWidth="480.0" text="ProGrzałka1" textFill="#e5ebe7">
+            <Label fx:id="label_name" alignment="CENTER" prefHeight="90.0" prefWidth="480.0" text="ProGrzałka1" textFill="#e5ebe7">
                <font>
                   <Font size="48.0" />
                </font>
             </Label>
-            <ImageView fitHeight="230.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imageView" fitHeight="230.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true">
                <Image url="@img/1.png" />
             </ImageView>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-               <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="70.0" prefWidth="129.0" text="10.00" textFill="#e5ebe7">
+               <Label fx:id="label_price" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="70.0" prefWidth="129.0" text="10.00" textFill="#e5ebe7">
                   <font>
                      <Font size="48.0" />
                   </font>
@@ -171,84 +170,83 @@
                <VBox prefHeight="359.0" prefWidth="118.0">
                   <Label text="Nazwa" textFill="#e5ebe7">
                      <VBox.margin>
-                        <Insets bottom="25.0"/>
+                        <Insets bottom="25.0" />
                      </VBox.margin>
                      <font>
-                        <Font size="24.0"/>
+                        <Font size="24.0" />
                      </font>
                   </Label>
                   <Label text="Obrazek" textFill="#e5ebe7">
                      <font>
-                        <Font size="24.0"/>
+                        <Font size="24.0" />
                      </font>
                      <VBox.margin>
-                        <Insets bottom="22.0"/>
+                        <Insets bottom="22.0" />
                      </VBox.margin>
                   </Label>
                   <Label text="Cena" textFill="#e5ebe7">
                      <font>
-                        <Font size="24.0"/>
+                        <Font size="24.0" />
                      </font>
                      <VBox.margin>
-                        <Insets bottom="10.0"/>
+                        <Insets bottom="10.0" />
                      </VBox.margin>
                   </Label>
                   <Label text="Notatka" textFill="#e5ebe7">
                      <font>
-                        <Font size="24.0"/>
+                        <Font size="24.0" />
                      </font>
                      <VBox.margin>
-                        <Insets bottom="20.0"/>
+                        <Insets bottom="20.0" />
                      </VBox.margin>
                   </Label>
                </VBox>
                <VBox prefHeight="359.0" prefWidth="261.0">
-                  <TextField prefHeight="50.0" prefWidth="282.0" promptText="Nazwa przedmiotu">
+                  <TextField fx:id="textField_name" prefHeight="50.0" prefWidth="282.0" promptText="Nazwa przedmiotu">
                      <VBox.margin>
-                        <Insets bottom="20.0"/>
+                        <Insets bottom="20.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField prefHeight="52.0" prefWidth="282.0" promptText="Ścieżka do pliku .png">
+                  <TextField fx:id="textField_image" prefHeight="52.0" prefWidth="282.0" promptText="Ścieżka do pliku .png">
                      <VBox.margin>
-                        <Insets bottom="20.0"/>
+                        <Insets bottom="20.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField prefHeight="54.0" prefWidth="282.0" promptText="Cena przedmiotu">
+                  <TextField fx:id="textField_price" prefHeight="54.0" prefWidth="282.0" promptText="Cena przedmiotu">
                      <VBox.margin>
-                        <Insets bottom="20.0"/>
+                        <Insets bottom="20.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextArea prefHeight="207.0" prefWidth="246.0" promptText="Notatka o przedmiocie"/>
+                  <TextArea fx:id="textField_notes" prefHeight="207.0" prefWidth="246.0" promptText="Notatka o przedmiocie" />
                </VBox>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-               <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="106.0" text="Dodaj" />
-               <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="106.0" text="Modyfikuj">
+               <Button fx:id="button_add" mnemonicParsing="false" prefHeight="55.0" prefWidth="106.0" text="Dodaj" />
+               <Button fx:id="button_update" mnemonicParsing="false" prefHeight="55.0" prefWidth="106.0" text="Modyfikuj">
                   <HBox.margin>
                      <Insets left="30.0" right="30.0" />
                   </HBox.margin></Button>
-               <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="106.0" text="Usuń" />
+               <Button fx:id="button_delete" mnemonicParsing="false" prefHeight="55.0" prefWidth="106.0" text="Usuń" />
             </HBox>
          </VBox>
       </right>
       <center>
          <VBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-            <HBox alignment="CENTER" prefHeight="144.0" prefWidth="960.0" styleClass="hbox_topBar"
-                  stylesheets="@css/styles.css">
-               <Label text="Grzałki" textFill="#282727">
+            <HBox alignment="CENTER" prefHeight="144.0" prefWidth="960.0" styleClass="hbox_topBar" stylesheets="@css/styles.css">
+               <Label fx:id="label_category" text="Grzałki" textFill="#282727">
                   <font>
-                     <Font size="64.0"/>
+                     <Font size="64.0" />
                   </font>
                </Label>
-               <Pane prefHeight="95.0" prefWidth="441.0"/>
-               <TextField prefHeight="43.0" prefWidth="218.0" promptText="Wpisz nazwę przedmiotu"/>
-               <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="50.0" text="Szukaj"/>
+               <Pane prefHeight="95.0" prefWidth="441.0" />
+               <TextField fx:id="textField_search" prefHeight="43.0" prefWidth="218.0" promptText="Wpisz nazwę przedmiotu" />
+               <Button fx:id="button_search" mnemonicParsing="false" prefHeight="41.0" prefWidth="50.0" text="Szukaj" />
             </HBox>
             <HBox prefHeight="924.0" prefWidth="912.0">
                <ScrollPane prefHeight="919.0" prefWidth="1001.0">
                   <GridPane prefHeight="15.0" prefWidth="8.0">
                      <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                   </GridPane>
                </ScrollPane>
