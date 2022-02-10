@@ -118,9 +118,13 @@ class Controller : Initializable {
         categoryService = CategoryService(categoryRepository)
     }
 
+    override fun initialize(p0: URL?, p1: ResourceBundle?) {
+        refreshList()
+        refreshCategoryName()
+    }
+
     @FXML
     private fun label_onMouseClicked(event: MouseEvent) {
-        println(event.source)
         selectedCategory = when(event.source) {
             label_coils -> categoryService.read(1)
             label_pods -> categoryService.read(2)
@@ -134,13 +138,10 @@ class Controller : Initializable {
             label_specimens -> categoryService.read(10)
             label_aromatics -> categoryService.read(11)
             label_others -> categoryService.read(12)
-            else -> CategoryModel(1, "Grzałki")
+            else -> CategoryModel(1, "Gaworex Error")
         }
         refreshList()
-    }
-
-    override fun initialize(p0: URL?, p1: ResourceBundle?) {
-       refreshList()
+        refreshCategoryName()
     }
 
     private fun refreshList() {
@@ -169,6 +170,24 @@ class Controller : Initializable {
             gridPane.prefWidth = Region.USE_COMPUTED_SIZE
             gridPane.prefHeight = Region.USE_COMPUTED_SIZE
             GridPane.setMargin(anchorPane, Insets(9.0))
+        }
+    }
+
+    private fun refreshCategoryName() {
+        label_category.text = when(selectedCategory.id) {
+            1 -> "Grzałki"
+            2 -> "Pody"
+            3 -> "Mody"
+            4 -> "Sticki"
+            5 -> "Parowniki"
+            6 -> "Susz&othersCBD"
+            7 -> "Vaporyzatory"
+            8 -> "Premixy"
+            9 -> "Liqiudy"
+            10 -> "Preparaty"
+            11 -> "Aromatyzujące"
+            12 -> "Inne"
+            else -> "Gaworex Error"
         }
     }
 
