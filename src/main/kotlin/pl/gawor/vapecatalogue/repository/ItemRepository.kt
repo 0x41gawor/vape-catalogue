@@ -1,6 +1,7 @@
 package pl.gawor.vapecatalogue.repository
 
 
+import pl.gawor.vapecatalogue.model.CategoryModel
 import pl.gawor.vapecatalogue.model.ItemModel
 import pl.gawor.vapecatalogue.repository.dbhelper.DbHelper
 import java.sql.ResultSet
@@ -11,7 +12,7 @@ class ItemRepository : CRUDrepository<ItemModel> {
 
     private val dbHelper = DbHelper()
 
-    override fun list(): List<ItemModel>? {
+    override fun list(): List<ItemModel> {
         val list = ArrayList<ItemModel>()
         val connection = dbHelper.getConnection()
         val query =  "select * from item"
@@ -75,6 +76,34 @@ class ItemRepository : CRUDrepository<ItemModel> {
         dbHelper.executeQuery(query)
         //TODO return true if deletion is completed
         return true
+    }
+
+    fun list(category: CategoryModel): List<ItemModel> {
+        val list = ArrayList<ItemModel>()
+        val connection = dbHelper.getConnection()
+        val query =  "select * from item where category_id = ${category.id}"
+        val statement: Statement
+        val resultSet: ResultSet
+
+        try {
+            statement = connection!!.createStatement()
+            resultSet = statement.executeQuery(query)
+            var entity: ItemModel?
+            while (resultSet.next()) {
+                entity = ItemModel(
+                    resultSet.getInt("id"),
+                    resultSet.getString("name"),
+                    resultSet.getDouble("price"),
+                    resultSet.getString("imagePath"),
+                    resultSet.getString("notes"),
+                    resultSet.getInt("category_id")
+                )
+                list.add(entity)
+            }
+        } catch (ex: SQLException) {
+            ex.printStackTrace()
+        }
+        return list
     }
 
 }
