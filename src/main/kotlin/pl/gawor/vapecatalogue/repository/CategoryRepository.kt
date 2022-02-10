@@ -10,7 +10,7 @@ class CategoryRepository : CRUDrepository<CategoryModel> {
 
     private val dbHelper = DbHelper()
 
-    override fun list(): List<CategoryModel>? {
+    override fun list(): List<CategoryModel> {
         val list = ArrayList<CategoryModel>()
         val connection = dbHelper.getConnection()
         val query =  "select * from category"
@@ -42,7 +42,24 @@ class CategoryRepository : CRUDrepository<CategoryModel> {
     }
 
     override fun read(id: Int): CategoryModel {
-        //TODO implement
+        val query =  "select * from category where id = $id"
+        val connection = dbHelper.getConnection()
+        val statement: Statement
+        val resultSet: ResultSet
+        try {
+            statement = connection!!.createStatement()
+            resultSet = statement.executeQuery(query)
+            val entity: CategoryModel?
+            while (resultSet.next()) {
+                entity = CategoryModel(
+                    resultSet.getInt("id"),
+                    resultSet.getString("name"),
+                )
+               return  entity
+            }
+        } catch (ex: SQLException) {
+            ex.printStackTrace()
+        }
         return CategoryModel(0,"")
     }
 
