@@ -9,13 +9,16 @@ import javafx.scene.control.Label
 import javafx.scene.control.TextArea
 import javafx.scene.control.TextField
 import javafx.scene.image.ImageView
+import javafx.scene.input.MouseEvent
 import javafx.scene.layout.AnchorPane
 import javafx.scene.layout.GridPane
 import javafx.scene.layout.Region
 import pl.gawor.vapecatalogue.VapeCatalogueApplication
 import pl.gawor.vapecatalogue.model.CategoryModel
 import pl.gawor.vapecatalogue.model.ItemModel
+import pl.gawor.vapecatalogue.repository.CategoryRepository
 import pl.gawor.vapecatalogue.repository.ItemRepository
+import pl.gawor.vapecatalogue.service.CategoryService
 import pl.gawor.vapecatalogue.service.ItemService
 import java.net.URL
 import java.util.*
@@ -102,19 +105,48 @@ class Controller : Initializable {
 
     private var itemService: ItemService
 
+    private var categoryService: CategoryService
+
     var list = ArrayList<ItemModel>()
+
+    var selectedCategory: CategoryModel = CategoryModel(1, "Grzałki")
 
     init {
         val itemRepository = ItemRepository()
         itemService = ItemService(itemRepository)
+        val categoryRepository = CategoryRepository()
+        categoryService = CategoryService(categoryRepository)
+    }
+
+    @FXML
+    private fun label_onMouseClicked(event: MouseEvent) {
+        println(event.source)
+        selectedCategory = when(event.source) {
+            label_coils -> categoryService.read(1)
+            label_pods -> categoryService.read(2)
+            label_mods -> categoryService.read(3)
+            label_sticks -> categoryService.read(4)
+            label_evaporator -> categoryService.read(5)
+            label_dryCBDs -> categoryService.read(6)
+            label_vaporizers -> categoryService.read(7)
+            label_premixes -> categoryService.read(8)
+            label_liquids -> categoryService.read(9)
+            label_specimens -> categoryService.read(10)
+            label_aromatics -> categoryService.read(11)
+            label_others -> categoryService.read(12)
+            else -> CategoryModel(1, "Grzałki")
+        }
+        refreshList()
     }
 
     override fun initialize(p0: URL?, p1: ResourceBundle?) {
-       refreshList(CategoryModel(3,"Grzałki"))
+       refreshList()
     }
 
-    private fun refreshList(category: CategoryModel) {
-        list = itemService.list(category) as ArrayList<ItemModel>
+    private fun refreshList() {
+        list = itemService.list(selectedCategory) as ArrayList<ItemModel>
+
+        gridPane.children.clear()
 
         var column = 0
         var row = 1
