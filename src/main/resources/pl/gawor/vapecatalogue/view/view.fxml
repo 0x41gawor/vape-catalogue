@@ -1,16 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="pl.gawor.vapecatalogue.controller.Controller">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1013.0"
+            prefWidth="1920.0" xmlns="http://javafx.com/javafx/17">
+   <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <left>
+         <VBox prefHeight="1013.0" prefWidth="480.0" styleClass="vbox_rightBar" stylesheets="@css/styles.css" BorderPane.alignment="CENTER">
+            <padding>
+               <Insets left="30.0" />
+            </padding>
+            <Label prefHeight="86.0" prefWidth="480.0" text="Kategorie" textFill="#c9d1cb">
+               <font>
+                  <Font size="48.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Pane prefHeight="62.0" prefWidth="450.0" />
+            <Label prefHeight="67.0" prefWidth="422.0" text="Grzałki" textFill="#e1e8e3">
+               <VBox.margin>
+                  <Insets right="200.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="54.0" prefWidth="480.0" text="Pody" textFill="#e1e8e3">
+               <VBox.margin>
+                  <Insets right="200.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="54.0" prefWidth="480.0" text="Mody" textFill="#e1e8e3">
+               <VBox.margin>
+                  <Insets right="200.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="54.0" prefWidth="480.0" text="Sticki" textFill="#e1e8e3">
+               <VBox.margin>
+                  <Insets right="200.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="54.0" prefWidth="480.0" text="Parowniki" textFill="#e1e8e3">
+               <VBox.margin>
+                  <Insets right="200.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="54.0" prefWidth="480.0" text="Susz&amp;othersCBD" textFill="#e1e8e3">
+               <VBox.margin>
+                  <Insets right="200.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="54.0" prefWidth="480.0" text="Vaporyzatory " textFill="#e1e8e3">
+               <VBox.margin>
+                  <Insets right="200.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="54.0" prefWidth="480.0" text="Premixy " textFill="#e1e8e3">
+               <VBox.margin>
+                  <Insets right="200.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="54.0" prefWidth="480.0" text="Liquidy" textFill="#e1e8e3">
+               <VBox.margin>
+                  <Insets right="200.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="54.0" prefWidth="480.0" text="Preparaty " textFill="#e1e8e3">
+               <VBox.margin>
+                  <Insets right="200.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="54.0" prefWidth="480.0" text="Aromatyzujące " textFill="#e1e8e3">
+               <VBox.margin>
+                  <Insets right="200.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="54.0" prefWidth="480.0" text="Inne" textFill="#e1e8e3">
+               <VBox.margin>
+                  <Insets right="200.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </VBox>
+      </left>
+      <right>
+         <VBox alignment="CENTER" prefHeight="1013.0" prefWidth="480.0" styleClass="vbox_rightBar" stylesheets="@css/styles.css" BorderPane.alignment="CENTER">
+            <Label alignment="CENTER" prefHeight="79.0" prefWidth="480.0" text="Wybrany przedmiot" textFill="#c9d1cb">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="90.0" prefWidth="480.0" text="ProGrzałka1" textFill="#e5ebe7">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="230.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@img/1.png" />
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="70.0" prefWidth="129.0" text="10.00" textFill="#e5ebe7">
+                  <font>
+                     <Font size="48.0" />
+                  </font>
+               </Label>
+               <Label alignment="BOTTOM_LEFT" prefHeight="53.0" prefWidth="90.0" text="PLN" textFill="#e5ebe7">
+                  <padding>
+                     <Insets left="10.0" />
+                  </padding>
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Label>
+            </HBox>
+            <Separator prefHeight="53.0" prefWidth="480.0" />
+            <HBox alignment="CENTER" prefHeight="394.0" prefWidth="480.0">
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+               <VBox prefHeight="359.0" prefWidth="118.0">
+                  <Label text="Nazwa" textFill="#e5ebe7">
+                     <VBox.margin>
+                        <Insets bottom="25.0"/>
+                     </VBox.margin>
+                     <font>
+                        <Font size="24.0"/>
+                     </font>
+                  </Label>
+                  <Label text="Obrazek" textFill="#e5ebe7">
+                     <font>
+                        <Font size="24.0"/>
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="22.0"/>
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Cena" textFill="#e5ebe7">
+                     <font>
+                        <Font size="24.0"/>
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0"/>
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Notatka" textFill="#e5ebe7">
+                     <font>
+                        <Font size="24.0"/>
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0"/>
+                     </VBox.margin>
+                  </Label>
+               </VBox>
+               <VBox prefHeight="359.0" prefWidth="261.0">
+                  <TextField prefHeight="50.0" prefWidth="282.0" promptText="Nazwa przedmiotu">
+                     <VBox.margin>
+                        <Insets bottom="20.0"/>
+                     </VBox.margin>
+                  </TextField>
+                  <TextField prefHeight="52.0" prefWidth="282.0" promptText="Ścieżka do pliku .png">
+                     <VBox.margin>
+                        <Insets bottom="20.0"/>
+                     </VBox.margin>
+                  </TextField>
+                  <TextField prefHeight="54.0" prefWidth="282.0" promptText="Cena przedmiotu">
+                     <VBox.margin>
+                        <Insets bottom="20.0"/>
+                     </VBox.margin>
+                  </TextField>
+                  <TextArea prefHeight="207.0" prefWidth="246.0" promptText="Notatka o przedmiocie"/>
+               </VBox>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="106.0" text="Dodaj" />
+               <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="106.0" text="Modyfikuj">
+                  <HBox.margin>
+                     <Insets left="30.0" right="30.0" />
+                  </HBox.margin></Button>
+               <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="106.0" text="Usuń" />
+            </HBox>
+         </VBox>
+      </right>
+      <center>
+         <VBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER" prefHeight="144.0" prefWidth="960.0" styleClass="hbox_topBar"
+                  stylesheets="@css/styles.css">
+               <Label text="Grzałki" textFill="#282727">
+                  <font>
+                     <Font size="64.0"/>
+                  </font>
+               </Label>
+               <Pane prefHeight="95.0" prefWidth="441.0"/>
+               <TextField prefHeight="43.0" prefWidth="218.0" promptText="Wpisz nazwę przedmiotu"/>
+               <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="50.0" text="Szukaj"/>
+            </HBox>
+            <HBox prefHeight="924.0" prefWidth="912.0">
+               <ScrollPane prefHeight="919.0" prefWidth="1001.0">
+                  <GridPane prefHeight="15.0" prefWidth="8.0">
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                     </rowConstraints>
+                  </GridPane>
+               </ScrollPane>
+            </HBox>
+         </VBox>
+      </center>
+   </BorderPane>
+</AnchorPane>
