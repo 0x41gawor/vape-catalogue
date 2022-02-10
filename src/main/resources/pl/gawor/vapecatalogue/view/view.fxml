@@ -233,12 +233,11 @@
       <center>
          <VBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <HBox alignment="CENTER" prefHeight="144.0" prefWidth="960.0" styleClass="hbox_topBar" stylesheets="@css/styles.css">
-               <Label fx:id="label_category" text="Grzałki" textFill="#282727">
+               <Label fx:id="label_category" prefHeight="93.0" prefWidth="643.0" text="Grzałki" textFill="#282727">
                   <font>
                      <Font size="64.0" />
                   </font>
                </Label>
-               <Pane prefHeight="95.0" prefWidth="441.0" />
                <TextField fx:id="textField_search" prefHeight="43.0" prefWidth="218.0" promptText="Wpisz nazwę przedmiotu" />
                <Button fx:id="button_search" mnemonicParsing="false" prefHeight="41.0" prefWidth="50.0" text="Szukaj" />
             </HBox>
