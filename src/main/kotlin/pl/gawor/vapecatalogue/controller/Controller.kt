@@ -41,9 +41,6 @@ class Controller : Initializable {
     private lateinit var gridPane: GridPane
 
     @FXML
-    private lateinit var imageView: ImageView
-
-    @FXML
     private lateinit var label_aromatics: Label
 
     @FXML
@@ -65,9 +62,6 @@ class Controller : Initializable {
     private lateinit var label_mods: Label
 
     @FXML
-    private lateinit var label_name: Label
-
-    @FXML
     private lateinit var label_others: Label
 
     @FXML
@@ -77,9 +71,6 @@ class Controller : Initializable {
     private lateinit var label_premixes: Label
 
     @FXML
-    private lateinit var label_price: Label
-
-    @FXML
     private lateinit var label_specimens: Label
 
     @FXML
@@ -87,6 +78,15 @@ class Controller : Initializable {
 
     @FXML
     private lateinit var label_vaporizers: Label
+
+    @FXML
+    private lateinit var label_name: Label
+
+    @FXML
+    private lateinit var imageView: ImageView
+
+    @FXML
+    private lateinit var label_price: Label
 
     @FXML
     private lateinit var textField_image: TextField
