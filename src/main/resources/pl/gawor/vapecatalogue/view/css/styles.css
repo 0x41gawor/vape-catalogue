@@ -5,3 +5,7 @@
 .hbox_topBar{
     -fx-background-color: #b7b3b3;
 }
+
+.label_rightBar {
+    -fx-background-color: #4b4949;
+}

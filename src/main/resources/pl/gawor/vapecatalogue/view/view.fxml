@@ -34,97 +34,97 @@
                </VBox.margin>
             </Label>
             <Pane prefHeight="62.0" prefWidth="450.0" />
-            <Label fx:id="label_coils" onMouseClicked="#label_onMouseClicked" prefHeight="67.0" prefWidth="422.0" text="Grzałki" textFill="#e1e8e3">
+            <Label fx:id="label_coils" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" styleClass="label_rightBar" stylesheets="@css/styles.css" text="Grzałki" textFill="#e1e8e3">
                <VBox.margin>
-                  <Insets right="200.0" />
+                  <Insets bottom="2.0" />
                </VBox.margin>
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="label_pods" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" text="Pody" textFill="#e1e8e3">
+            <Label fx:id="label_pods" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" styleClass="label_rightBar" stylesheets="@css/styles.css" text="Pody" textFill="#e1e8e3">
                <VBox.margin>
-                  <Insets right="200.0" />
+                  <Insets bottom="2.0" />
                </VBox.margin>
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="label_mods" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" text="Mody" textFill="#e1e8e3">
+            <Label fx:id="label_mods" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" styleClass="label_rightBar" stylesheets="@css/styles.css" text="Mody" textFill="#e1e8e3">
                <VBox.margin>
-                  <Insets right="200.0" />
+                  <Insets bottom="2.0" />
                </VBox.margin>
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="label_sticks" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" text="Sticki" textFill="#e1e8e3">
+            <Label fx:id="label_sticks" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" styleClass="label_rightBar" stylesheets="@css/styles.css" text="Sticki" textFill="#e1e8e3">
                <VBox.margin>
-                  <Insets right="200.0" />
+                  <Insets bottom="2.0" />
                </VBox.margin>
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="label_evaporator" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" text="Parowniki" textFill="#e1e8e3">
+            <Label fx:id="label_evaporator" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" styleClass="label_rightBar" stylesheets="@css/styles.css" text="Parowniki" textFill="#e1e8e3">
                <VBox.margin>
-                  <Insets right="200.0" />
+                  <Insets bottom="2.0" />
                </VBox.margin>
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="label_dryCBDs" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" text="Susz&amp;CBD" textFill="#e1e8e3">
+            <Label fx:id="label_dryCBDs" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" styleClass="label_rightBar" stylesheets="@css/styles.css" text="Susz&amp;CBD" textFill="#e1e8e3">
                <VBox.margin>
-                  <Insets right="200.0" />
+                  <Insets bottom="2.0" />
                </VBox.margin>
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="label_vaporizers" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" text="Vaporyzatory " textFill="#e1e8e3">
+            <Label fx:id="label_vaporizers" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" styleClass="label_rightBar" stylesheets="@css/styles.css" text="Vaporyzatory " textFill="#e1e8e3">
                <VBox.margin>
-                  <Insets right="200.0" />
+                  <Insets bottom="2.0" />
                </VBox.margin>
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="label_premixes" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" text="Premixy " textFill="#e1e8e3">
+            <Label fx:id="label_premixes" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" styleClass="label_rightBar" stylesheets="@css/styles.css" text="Premixy " textFill="#e1e8e3">
                <VBox.margin>
-                  <Insets right="200.0" />
+                  <Insets bottom="2.0" />
                </VBox.margin>
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="label_liquids" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" text="Liquidy" textFill="#e1e8e3">
+            <Label fx:id="label_liquids" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" styleClass="label_rightBar" stylesheets="@css/styles.css" text="Liquidy" textFill="#e1e8e3">
                <VBox.margin>
-                  <Insets right="200.0" />
+                  <Insets bottom="2.0" />
                </VBox.margin>
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="label_specimens" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" text="Preparaty " textFill="#e1e8e3">
+            <Label fx:id="label_specimens" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" styleClass="label_rightBar" stylesheets="@css/styles.css" text="Preparaty " textFill="#e1e8e3">
                <VBox.margin>
-                  <Insets right="200.0" />
+                  <Insets bottom="2.0" />
                </VBox.margin>
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="label_aromatics" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" text="Aromatyzujące " textFill="#e1e8e3">
+            <Label fx:id="label_aromatics" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" styleClass="label_rightBar" stylesheets="@css/styles.css" text="Aromatyzujące " textFill="#e1e8e3">
                <VBox.margin>
-                  <Insets right="200.0" />
+                  <Insets bottom="2.0" />
                </VBox.margin>
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="label_others" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" text="Inne" textFill="#e1e8e3">
+            <Label fx:id="label_others" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" styleClass="label_rightBar" stylesheets="@css/styles.css" text="Inne" textFill="#e1e8e3">
                <VBox.margin>
-                  <Insets right="200.0" />
+                  <Insets bottom="2.0" />
                </VBox.margin>
                <font>
                   <Font size="24.0" />
@@ -221,12 +221,12 @@
                </VBox>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-               <Button fx:id="button_add" mnemonicParsing="false" prefHeight="55.0" prefWidth="106.0" text="Dodaj" />
-               <Button fx:id="button_update" mnemonicParsing="false" prefHeight="55.0" prefWidth="106.0" text="Modyfikuj">
+               <Button fx:id="button_add" mnemonicParsing="false" onAction="#buttonAdd_onAction" prefHeight="55.0" prefWidth="106.0" text="Dodaj" />
+               <Button fx:id="button_update" mnemonicParsing="false" onAction="#buttonUpdate_onAction" prefHeight="55.0" prefWidth="106.0" text="Modyfikuj">
                   <HBox.margin>
                      <Insets left="30.0" right="30.0" />
                   </HBox.margin></Button>
-               <Button fx:id="button_delete" mnemonicParsing="false" prefHeight="55.0" prefWidth="106.0" text="Usuń" />
+               <Button fx:id="button_delete" mnemonicParsing="false" onAction="#buttonDelete_onAction" prefHeight="55.0" prefWidth="106.0" text="Usuń" />
             </HBox>
          </VBox>
       </right>
