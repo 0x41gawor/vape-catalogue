@@ -1,5 +1,6 @@
 package pl.gawor.vapecatalogue.controller
 
+import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
 import javafx.fxml.Initializable
@@ -221,4 +222,26 @@ class Controller : Initializable,ISubscriber {
         textField_notes.text = selectedItem.notes
     }
 
+    @FXML
+    fun buttonAdd_onAction() {
+        val id = 0
+        val name = textField_name.text
+        val price = textField_price.text.toDouble()
+        val imagePath = textField_image.text
+        val notes = textField_notes.text
+        val categoryId = selectedCategory.id
+
+        val model = ItemModel(id, name, price, imagePath, notes, categoryId)
+        itemService.create(model)
+        refreshList()
+    }
+
+    @FXML
+    fun buttonDelete_onAction() {
+    }
+
+    @FXML
+    fun buttonUpdate_onAction() {
+
+    }
 }
