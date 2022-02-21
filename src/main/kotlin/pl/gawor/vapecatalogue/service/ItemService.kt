@@ -29,4 +29,8 @@ class ItemService(private val repository: ItemRepository) : CRUDService<ItemMode
     fun list(category: CategoryModel): List<ItemModel> {
         return repository.list(category)
     }
+
+    fun search(template: String, category: CategoryModel): List<ItemModel> {
+        return repository.read(template, category)
+    }
 }
