@@ -106,4 +106,30 @@ class ItemRepository : CRUDrepository<ItemModel> {
         return list
     }
 
+    fun read(template: String, category: CategoryModel) : List<ItemModel> {
+        val list = ArrayList<ItemModel>()
+        val connection = dbHelper.getConnection()
+        val query =  "select * from item where  category_id = ${category.id} and name like '%$template%'"
+        val statement: Statement
+        val resultSet: ResultSet
+        try {
+            statement = connection!!.createStatement()
+            resultSet = statement.executeQuery(query)
+            var entity: ItemModel?
+            while (resultSet.next()) {
+                entity = ItemModel(
+                    resultSet.getInt("id"),
+                    resultSet.getString("name"),
+                    resultSet.getDouble("price"),
+                    resultSet.getString("imagePath"),
+                    resultSet.getString("notes"),
+                    resultSet.getInt("category_id")
+                )
+                list.add(entity)
+            }
+        } catch (ex: SQLException) {
+            ex.printStackTrace()
+        }
+        return list
+    }
 }
