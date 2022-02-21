@@ -237,10 +237,6 @@ class Controller : Initializable,ISubscriber {
     }
 
     @FXML
-    fun buttonDelete_onAction() {
-    }
-
-    @FXML
     fun buttonUpdate_onAction() {
         val id = selectedItem.id
         val name = textField_name.text
@@ -252,5 +248,13 @@ class Controller : Initializable,ISubscriber {
         val model = ItemModel(id, name, price, imagePath, notes, categoryId)
         itemService.update(id, model)
         refreshList()
+    }
+
+    @FXML
+    fun buttonDelete_onAction() {
+        itemService.delete(selectedItem.id)
+        selectedItem = ItemModel()
+        refreshList()
+        refreshSelectedItem()
     }
 }
