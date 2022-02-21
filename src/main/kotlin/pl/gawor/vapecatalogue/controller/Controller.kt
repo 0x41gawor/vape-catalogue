@@ -257,4 +257,35 @@ class Controller : Initializable,ISubscriber {
         refreshList()
         refreshSelectedItem()
     }
+
+    @FXML
+    fun buttonSearch_onAction() {
+        list = itemService.search(textField_search.text, selectedCategory) as ArrayList<ItemModel>
+
+        gridPane.children.clear()
+
+        var column = 0
+        var row = 1
+
+        for (model in list) {
+            val fxmlLoader = FXMLLoader(VapeCatalogueApplication::class.java.getResource("view/item.fxml"))
+            val anchorPane: AnchorPane = fxmlLoader.load()
+
+            val itemController = fxmlLoader.getController<ItemController>()
+            itemController.set(model)
+            itemController.subscribe(this)
+            if (column == 4) {
+                column = 0
+                row ++
+            }
+            gridPane.add(anchorPane, column++, row)
+            gridPane.minWidth = Region.USE_COMPUTED_SIZE
+            gridPane.minHeight = Region.USE_COMPUTED_SIZE
+            gridPane.maxWidth = Region.USE_COMPUTED_SIZE
+            gridPane.maxHeight = Region.USE_COMPUTED_SIZE
+            gridPane.prefWidth = Region.USE_COMPUTED_SIZE
+            gridPane.prefHeight = Region.USE_COMPUTED_SIZE
+            GridPane.setMargin(anchorPane, Insets(9.0))
+        }
+    }
 }
