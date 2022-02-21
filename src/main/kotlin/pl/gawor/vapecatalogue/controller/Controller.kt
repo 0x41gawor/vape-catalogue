@@ -242,6 +242,15 @@ class Controller : Initializable,ISubscriber {
 
     @FXML
     fun buttonUpdate_onAction() {
+        val id = selectedItem.id
+        val name = textField_name.text
+        val price = textField_price.text.toDouble()
+        val imagePath = textField_image.text
+        val notes = textField_notes.text
+        val categoryId = selectedCategory.id
 
+        val model = ItemModel(id, name, price, imagePath, notes, categoryId)
+        itemService.update(id, model)
+        refreshList()
     }
 }
