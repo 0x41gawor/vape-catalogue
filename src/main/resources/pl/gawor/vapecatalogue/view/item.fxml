@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="215.0" prefWidth="225.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.gawor.vapecatalogue.controller.ItemController">
+<AnchorPane onMouseClicked="#anchorPane_onMouseClicked" prefHeight="215.0" prefWidth="225.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.gawor.vapecatalogue.controller.ItemController">
     <VBox alignment="CENTER" prefHeight="215.0" prefWidth="225.0">
         <Label fx:id="label_name" text="ProGrzalka1">
          <font>

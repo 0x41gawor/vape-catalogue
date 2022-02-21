@@ -74,7 +74,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="label_dryCBDs" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" text="Susz&amp;othersCBD" textFill="#e1e8e3">
+            <Label fx:id="label_dryCBDs" onMouseClicked="#label_onMouseClicked" prefHeight="54.0" prefWidth="480.0" text="Susz&amp;CBD" textFill="#e1e8e3">
                <VBox.margin>
                   <Insets right="200.0" />
                </VBox.margin>

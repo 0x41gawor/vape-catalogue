@@ -8,6 +8,7 @@ import javafx.scene.control.Button
 import javafx.scene.control.Label
 import javafx.scene.control.TextArea
 import javafx.scene.control.TextField
+import javafx.scene.image.Image
 import javafx.scene.image.ImageView
 import javafx.scene.input.MouseEvent
 import javafx.scene.layout.AnchorPane
@@ -24,7 +25,7 @@ import java.net.URL
 import java.util.*
 import kotlin.collections.ArrayList
 
-class Controller : Initializable {
+class Controller : Initializable,ISubscriber {
     @FXML
     private lateinit var button_add: Button
 
@@ -111,6 +112,8 @@ class Controller : Initializable {
 
     var selectedCategory: CategoryModel = CategoryModel(1, "Grzałki")
 
+    var selectedItem: ItemModel = ItemModel()
+
     init {
         val itemRepository = ItemRepository()
         itemService = ItemService(itemRepository)
@@ -121,6 +124,7 @@ class Controller : Initializable {
     override fun initialize(p0: URL?, p1: ResourceBundle?) {
         refreshList()
         refreshCategoryName()
+        refreshSelectedItem()
     }
 
     @FXML
@@ -142,6 +146,8 @@ class Controller : Initializable {
         }
         refreshList()
         refreshCategoryName()
+        selectedItem = ItemModel()
+        refreshSelectedItem()
     }
 
     private fun refreshList() {
@@ -158,6 +164,7 @@ class Controller : Initializable {
 
             val itemController = fxmlLoader.getController<ItemController>()
             itemController.set(model)
+            itemController.subscribe(this)
             if (column == 4) {
                 column = 0
                 row ++
@@ -180,7 +187,7 @@ class Controller : Initializable {
             3 -> "Mody"
             4 -> "Sticki"
             5 -> "Parowniki"
-            6 -> "Susz&othersCBD"
+            6 -> "Susz&CBD"
             7 -> "Vaporyzatory"
             8 -> "Premixy"
             9 -> "Liqiudy"
@@ -189,6 +196,29 @@ class Controller : Initializable {
             12 -> "Inne"
             else -> "Gaworex Error"
         }
+    }
+
+    override fun update(model: ItemModel) {
+        selectedItem = model
+        refreshSelectedItem()
+    }
+
+    private fun refreshSelectedItem() {
+        label_name.text = selectedItem.name
+        label_price.text = if (selectedItem.price != 0.0) selectedItem.price.toString() else ""
+        val image: Image
+        if (selectedItem.imagePath != "") {
+            image = Image(VapeCatalogueApplication::class.java.getResourceAsStream(selectedItem.imagePath))
+        } else {
+            image = Image(VapeCatalogueApplication::class.java.getResourceAsStream("view/img/1.png"))
+        }
+
+        imageView.image = image
+
+        textField_name.text = selectedItem.name
+        textField_image.text = selectedItem.imagePath
+        textField_price.text = if (selectedItem.price != 0.0) selectedItem.price.toString() else ""
+        textField_notes.text = selectedItem.notes
     }
 
 }
