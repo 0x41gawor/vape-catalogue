@@ -4,7 +4,6 @@ import javafx.fxml.FXML
 import javafx.scene.control.Label
 import javafx.scene.image.Image
 import javafx.scene.image.ImageView
-import javafx.scene.input.MouseEvent
 import pl.gawor.vapecatalogue.VapeCatalogueApplication
 import pl.gawor.vapecatalogue.model.ItemModel
 import kotlin.collections.ArrayList
@@ -37,7 +36,7 @@ class ItemController {
     }
 
     //---// S U B S C R I B E R S
-    private val subscribers: ArrayList<ISubscriber> = ArrayList<ISubscriber>()
+    private val subscribers: ArrayList<ISubscriber> = ArrayList()
 
     //---// S U B S C R I B E
     fun subscribe(s: ISubscriber) {
