@@ -12,7 +12,7 @@
 
 ## Motivation
 
-A friend of mine works in a small vape-shop. The shop lacks some easy-access price list and he sees a problem in it, because clients wait way too long after they've asked just about the item price. He can't manage to use paper because of the enormous amount of items. 
+A friend of mine works in a small vape-shop. The shop lacks some easy-access price list and he sees a problem in it. Clients wait way too long after they've just asked about the item price. He can't manage to use paper because of the enormous amount of items. 
 
 He asked me if I am able to write a simple app for him. He told me his requirements, which I translated to basic CRUD with local database. 
 
@@ -32,7 +32,7 @@ Final UI is ready and all of the cool features (like refreshing list after each 
 
 #### Stage 3 - Generic catalogue app
 
-Categories are also user defined and app can be used as catalogue of any items described with: name, price, image, notes.
+Categories are also user-defined and app can be used as catalogue of any items described with: name, price, image, notes.
 
 #### Current state
 
@@ -53,5 +53,5 @@ I will describe it after final release.
 
 ### Kotlin > Java
 
-I've always been a supporter of Kotlin. During development of this project I was watching JavaFX tutorial in Java on my left display, and in parallel I was retyping the code into Koltin on my right display. At some points I realized how much Kotlin code is simpler, shorter, more readable and even more satisfying. 
+I've always been a supporter of Kotlin. During development of this project I was watching JavaFX tutorial in Java on my left display, and in parallel I was retyping the code into Kotlin on my right display. At some point I realized how much Kotlin code is simpler, shorter, more readable and even more satisfying. 
 
