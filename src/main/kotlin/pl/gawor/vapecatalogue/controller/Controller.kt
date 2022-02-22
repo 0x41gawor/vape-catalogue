@@ -190,7 +190,7 @@ class Controller : Initializable,ISubscriber {
             6 -> "Susz&CBD"
             7 -> "Vaporyzatory"
             8 -> "Premixy"
-            9 -> "Liqiudy"
+            9 -> "Liquidy"
             10 -> "Preparaty"
             11 -> "Aromatyzujące"
             12 -> "Inne"
