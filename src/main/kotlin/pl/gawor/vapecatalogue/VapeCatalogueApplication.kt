@@ -4,8 +4,6 @@ import javafx.application.Application
 import javafx.fxml.FXMLLoader
 import javafx.scene.Scene
 import javafx.stage.Stage
-import pl.gawor.vapecatalogue.model.ItemModel
-import pl.gawor.vapecatalogue.repository.ItemRepository
 
 class VapeCatalogueApplication : Application() {
     override fun start(stage: Stage) {
@@ -16,8 +14,11 @@ class VapeCatalogueApplication : Application() {
         stage.scene = scene
         stage.show()
     }
-}
 
-fun main() {
-    Application.launch(VapeCatalogueApplication::class.java)
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            launch(VapeCatalogueApplication::class.java)
+        }
+    }
 }
